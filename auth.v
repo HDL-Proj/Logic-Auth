@@ -26,71 +26,80 @@ module auth;
     initial begin
     $dumpfile("auth.vcd");
     $dumpvars(0, auth);
-        s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
+        s1 = 0; s2 = 0; s3 = 0; s4 = 0; constant = 1;
         #1
-        s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
+        s1 = 0; s2 = 0; s3 = 0; s4 = 1; constant = 1;
         #1
-        s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
+        s1 = 0; s2 = 0; s3 = 1; s4 = 0; constant = 1;
         #1
-        s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1              //hati
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1;     // hati //hati
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1               //hati
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 0; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1; //hati        //hati
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1               //hati
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1;     //hati   //hati
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1               //hati
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1
-        // s1 = 1; s2 = 0; s3 = 0; s4 = 0; g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
-        // #1;            
+        s1 = 0; s2 = 0; s3 = 1; s4 = 1; constant = 1;
+        #1              
+        s1 = 0; s2 = 1; s3 = 0; s4 = 0; constant = 1;
+        #1
+        s1 = 0; s2 = 1; s3 = 0; s4 = 1; constant = 1;
+        #1
+        s1 = 0; s2 = 1; s3 = 1; s4 = 0; constant = 1;
+        #1
+        s1 = 0; s2 = 1; s3 = 1; s4 = 1; constant = 1;
+        #1;     
+        s1 = 1; s2 = 0; s3 = 0; s4 = 0; constant = 1;
+        #1
+        s1 = 1; s2 = 0; s3 = 0; s4 = 1; constant = 1;
+        #1
+        s1 = 1; s2 = 0; s3 = 1; s4 = 0; constant = 1;
+        #1
+        s1 = 1; s2 = 0; s3 = 1; s4 = 1; constant = 1;
+        #1                
+        s1 = 1; s2 = 1; s3 = 0; s4 = 0; constant = 1;
+        #1
+        s1 = 1; s2 = 1; s3 = 0; s4 = 1; constant = 1;
+        #1
+        s1 = 1; s2 = 1; s3 = 1; s4 = 0; constant = 1;
+        #1
+        s1 = 1; s2 = 1; s3 = 1; s4 = 1; constant = 1;
+        #1;  
+
+        //another set
+
+        g1 = 0; g2 = 0; g3 = 0; g4 = 0; constant = 1;
+        #1
+        g1 = 0; g2 = 0; g3 = 0; g4 = 1; constant = 1;
+        #1
+        g1 = 0; g2 = 0; g3 = 1; g4 = 0; constant = 1;
+        #1
+        g1 = 0; g2 = 0; g3 = 1; g4 = 1; constant = 1;
+        #1
+        g1 = 0; g2 = 1; g3 = 0; g4 = 0; constant = 1;
+        #1
+        g1 = 0; g2 = 1; g3 = 0; g4 = 1; constant = 1;
+        #1
+        g1 = 0; g2 = 1; g3 = 1; g4 = 0; constant = 1;
+        #1
+        g1 = 0; g2 = 1; g3 = 1; g4 = 1; constant = 1;
+        #1
+        g1 = 1; g2 = 0; g3 = 0; g4 = 0; constant = 1;
+        #1
+        g1 = 1; g2 = 0; g3 = 0; g4 = 1; constant = 1;
+        #1
+        g1 = 1; g2 = 0; g3 = 1; g4 = 0; constant = 1;
+        #1
+        g1 = 1; g2 = 0; g3 = 1; g4 = 1; constant = 1;
+        #1
+        g1 = 1; g2 = 1; g3 = 0; g4 = 0; constant = 1;
+        #1
+        g1 = 1; g2 = 1; g3 = 0; g4 = 1; constant = 1;
+        #1
+        g1 = 1; g2 = 1; g3 = 1; g4 = 0; constant = 1;
+        #1
+        g1 = 1; g2 = 1; g3 = 1; g4 = 1; constant = 1;  
+        #1;
     end
+
+    //     initial begin
+    // $dumpfile("auth.vcd");
+    // $dumpvars(0, auth);
+  
+    // end
     
 
 endmodule
