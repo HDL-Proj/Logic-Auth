@@ -23,6 +23,7 @@ module auth;
     assign  unmatched = ( (!middle_gate) && constant );
 
     //todo: create 256 batch huhu (hard coded truth table)
+    //note: disregard todo above cause it works with just different set
     initial begin
     $dumpfile("auth.vcd");
     $dumpvars(0, auth);
