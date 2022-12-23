@@ -1,0 +1,71 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01268C08 .scope module, "eight_bit_auth" "eight_bit_auth" 2 2;
+ .timescale 0 0;
+L_01260EC0 .functor AND 1, L_0126E4C8, v0126E368_0, C4<1>, C4<1>;
+L_01260F68 .functor AND 1, v0126E1B0_0, L_0126E260, C4<1>, C4<1>;
+L_01268FD0 .functor OR 1, L_01260EC0, L_01260F68, C4<0>, C4<0>;
+L_012690B0 .functor AND 1, L_0126E578, v0126E368_0, C4<1>, C4<1>;
+L_0126E8F8 .functor AND 1, v0126E1B0_0, L_01114CE8, C4<1>, C4<1>;
+L_0126E968 .functor OR 1, L_012690B0, L_0126E8F8, C4<0>, C4<0>;
+L_0126E888 .functor AND 1, L_0126E520, L_011154D0, C4<1>, C4<1>;
+L_0126E9D8 .functor AND 1, L_0126E888, v0126E208_0, C4<1>, C4<1>;
+L_0126EAB8 .functor AND 1, L_01115478, v0126E208_0, C4<1>, C4<1>;
+v010F3908_0 .net *"_s1", 0 0, L_0126E4C8; 1 drivers
+v0126E5D0_0 .net *"_s13", 0 0, L_0126E578; 1 drivers
+v0126E3C0_0 .net *"_s14", 0 0, L_012690B0; 1 drivers
+v0126E628_0 .net *"_s17", 0 0, L_01114CE8; 1 drivers
+v0126E2B8_0 .net *"_s18", 0 0, L_0126E8F8; 1 drivers
+v0126E680_0 .net *"_s2", 0 0, L_01260EC0; 1 drivers
+v0126E0A8_0 .net *"_s20", 0 0, L_0126E968; 1 drivers
+v0126E470_0 .net *"_s29", 0 0, L_01115478; 1 drivers
+v0126E6D8_0 .net *"_s5", 0 0, L_0126E260; 1 drivers
+v0126E310_0 .net *"_s6", 0 0, L_01260F68; 1 drivers
+v0126DFA0_0 .net *"_s8", 0 0, L_01268FD0; 1 drivers
+v0126E208_0 .var "constant", 0 0;
+v0126E050_0 .net "guesser_final", 0 0, L_011154D0; 1 drivers
+v0126E368_0 .var "guesser_var", 0 0;
+v0126DFF8_0 .net "matched", 0 0, L_0126E9D8; 1 drivers
+v0126E100_0 .net "middle_gate", 0 0, L_0126E888; 1 drivers
+v0126E158_0 .net "setter_final", 0 0, L_0126E520; 1 drivers
+v0126E1B0_0 .var "setter_var", 0 0;
+v0126E418_0 .net "unmatched", 0 0, L_0126EAB8; 1 drivers
+L_0126E4C8 .reduce/nor v0126E1B0_0;
+L_0126E260 .reduce/nor v0126E368_0;
+L_0126E520 .reduce/nor L_01268FD0;
+L_0126E578 .reduce/nor v0126E1B0_0;
+L_01114CE8 .reduce/nor v0126E368_0;
+L_011154D0 .reduce/nor L_0126E968;
+L_01115478 .reduce/nor L_0126E888;
+    .scope S_01268C08;
+T_0 ;
+    %set/v v0126E208_0, 1, 1;
+    %end;
+    .thread T_0;
+    .scope S_01268C08;
+T_1 ;
+    %vpi_call 2 29 "$dumpfile", "eight_bit_auth.vcd";
+    %vpi_call 2 30 "$dumpvars", 1'sb0, S_01268C08;
+    %set/v v0126E1B0_0, 0, 1;
+    %set/v v0126E368_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0126E1B0_0, 0, 1;
+    %set/v v0126E368_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0126E1B0_0, 1, 1;
+    %set/v v0126E368_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0126E1B0_0, 0, 1;
+    %set/v v0126E368_0, 0, 1;
+    %delay 1, 0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "eight_bit_auth.v";

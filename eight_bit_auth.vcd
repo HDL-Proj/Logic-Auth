@@ -1,0 +1,49 @@
+$date
+	Fri Dec 23 23:38:38 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module eight_bit_auth $end
+$var wire 1 ! guesser_final $end
+$var wire 1 " matched $end
+$var wire 1 # middle_gate $end
+$var wire 1 $ setter_final $end
+$var wire 1 % unmatched $end
+$var reg 1 & constant $end
+$var reg 1 ' guesser_var $end
+$var reg 1 ( setter_var $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0'
+1&
+0%
+1$
+1#
+1"
+1!
+$end
+#1
+0"
+1%
+0#
+0!
+0$
+1'
+#2
+1"
+0%
+1#
+1$
+1!
+1(
+#3
+0'
+0(
+#4
