@@ -24,7 +24,7 @@ module eight_bit_auth;
     $dumpvars(0, eight_bit_auth);
         setter_var = 0; guesser_var = 0;  
         #1
-        setter_var = 0; guesser_var = 1;  
+        setter_var = 1; guesser_var = 1;  
         #1
         setter_var = 1; guesser_var = 1; 
         #1
@@ -32,7 +32,7 @@ module eight_bit_auth;
         #1
         setter_var = 0; guesser_var = 0;  
         #1
-        setter_var = 0; guesser_var = 1;  
+        setter_var = 1; guesser_var = 1;  
         #1
         setter_var = 1; guesser_var = 1; 
         #1
