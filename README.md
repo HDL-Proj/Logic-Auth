@@ -7,13 +7,13 @@
 First, generate/update vvp file:
 
 ```bash
-iverilog -o tb_main.vvp tb_main.v
+iverilog -o eight_bit_auth.vvp eight_bit_auth.v
 ```
 
 Then, generate/update vcd file:
 
 ```bash
-vvp tb_main.vvp
+vvp eight_bit_auth.vvp
 ```
 
 Lastly, simulate
