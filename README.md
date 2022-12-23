@@ -21,3 +21,5 @@ Lastly, simulate
 ```bash
 gtkwave
 ```
+
+### 📝Note: disregard tb_main.v file for now
