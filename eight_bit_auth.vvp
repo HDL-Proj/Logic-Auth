@@ -4,80 +4,92 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_01009158 .scope module, "eight_bit_auth" "eight_bit_auth" 2 2;
+S_01159798 .scope module, "eight_bit_auth" "eight_bit_auth" 2 4;
  .timescale 0 0;
-L_0100A2D0 .functor AND 1, L_0100B638, v0100B428_0, C4<1>, C4<1>;
-L_01000E68 .functor AND 1, v0100B480_0, L_0100B5E0, C4<1>, C4<1>;
-L_01000F10 .functor OR 1, L_0100A2D0, L_01000E68, C4<0>, C4<0>;
-L_0100E7A0 .functor AND 1, L_0103FCB0, v0100B428_0, C4<1>, C4<1>;
-L_0100E848 .functor AND 1, v0100B480_0, L_0103FF70, C4<1>, C4<1>;
-L_0100E6C0 .functor OR 1, L_0100E7A0, L_0100E848, C4<0>, C4<0>;
-L_0100E688 .functor AND 1, L_0100B530, L_0103FFC8, C4<1>, C4<1>;
-L_0100E7D8 .functor AND 1, L_0100E688, v0100B3D0_0, C4<1>, C4<1>;
-L_0100E8B8 .functor AND 1, L_0103FE10, v0100B3D0_0, C4<1>, C4<1>;
-v0100B320_0 .net *"_s1", 0 0, L_0100B638; 1 drivers
-v0100B218_0 .net *"_s13", 0 0, L_0103FCB0; 1 drivers
-v0100B6E8_0 .net *"_s14", 0 0, L_0100E7A0; 1 drivers
-v0100B848_0 .net *"_s17", 0 0, L_0103FF70; 1 drivers
-v0100B8A0_0 .net *"_s18", 0 0, L_0100E848; 1 drivers
-v0100B378_0 .net *"_s2", 0 0, L_0100A2D0; 1 drivers
-v0100B8F8_0 .net *"_s20", 0 0, L_0100E6C0; 1 drivers
-v0100B588_0 .net *"_s29", 0 0, L_0103FE10; 1 drivers
-v0100B740_0 .net *"_s5", 0 0, L_0100B5E0; 1 drivers
-v0100B798_0 .net *"_s6", 0 0, L_01000E68; 1 drivers
-v0100B690_0 .net *"_s8", 0 0, L_01000F10; 1 drivers
-v0100B3D0_0 .var "constant", 0 0;
-v0100B7F0_0 .net "guesser_final", 0 0, L_0103FFC8; 1 drivers
-v0100B428_0 .var "guesser_var", 0 0;
-v0100B950_0 .net "matched", 0 0, L_0100E7D8; 1 drivers
-v0100B270_0 .net "middle_gate", 0 0, L_0100E688; 1 drivers
-v0100B2C8_0 .net "setter_final", 0 0, L_0100B530; 1 drivers
-v0100B480_0 .var "setter_var", 0 0;
-v0100B4D8_0 .net "unmatched", 0 0, L_0100E8B8; 1 drivers
-L_0100B638 .reduce/nor v0100B480_0;
-L_0100B5E0 .reduce/nor v0100B428_0;
-L_0100B530 .reduce/nor L_01000F10;
-L_0103FCB0 .reduce/nor v0100B480_0;
-L_0103FF70 .reduce/nor v0100B428_0;
-L_0103FFC8 .reduce/nor L_0100E6C0;
-L_0103FE10 .reduce/nor L_0100E688;
-    .scope S_01009158;
+L_0115EDB8 .functor AND 1, L_00FE16D0, L_00FE1780, C4<1>, C4<1>;
+L_0115EBF8 .functor AND 1, L_0115EDB8, v0115CF18_0, C4<1>, C4<1>;
+L_0115EA70 .functor AND 1, L_00FE17D8, v0115CF18_0, C4<1>, C4<1>;
+v0115CF70_0 .net *"_s5", 0 0, L_00FE17D8; 1 drivers
+v0115CF18_0 .var "constant", 0 0;
+v0115D288_0 .net "guesser_final", 0 0, L_00FE1780; 1 drivers
+v0115CFC8_0 .var "guesser_var", 0 0;
+v0115D020_0 .net "matched", 0 0, L_0115EBF8; 1 drivers
+v0115D180_0 .net "middle_gate", 0 0, L_0115EDB8; 1 drivers
+v00FE1678_0 .net "setter_final", 0 0, L_00FE16D0; 1 drivers
+v00FE1360_0 .var "setter_var", 0 0;
+v00FE1570_0 .net "unmatched", 0 0, L_0115EA70; 1 drivers
+L_00FE17D8 .reduce/nor L_0115EDB8;
+S_01159930 .scope module, "setterInstance" "password_setter" 2 20, 3 1, S_01159798;
+ .timescale 0 0;
+L_0115B328 .functor AND 1, L_00FE15C8, v0115CFC8_0, C4<1>, C4<1>;
+L_0115B2B8 .functor AND 1, v00FE1360_0, L_00FE1620, C4<1>, C4<1>;
+L_01150F70 .functor OR 1, L_0115B328, L_0115B2B8, C4<0>, C4<0>;
+v0115D078_0 .net *"_s1", 0 0, L_00FE15C8; 1 drivers
+v0115D4F0_0 .net *"_s2", 0 0, L_0115B328; 1 drivers
+v0115D338_0 .net *"_s5", 0 0, L_00FE1620; 1 drivers
+v0115D440_0 .net *"_s6", 0 0, L_0115B2B8; 1 drivers
+v0115CEC0_0 .net *"_s8", 0 0, L_01150F70; 1 drivers
+v0115D0D0_0 .net "guesser_var", 0 0, v0115CFC8_0; 1 drivers
+v0115D3E8_0 .alias "setter_final", 0 0, v00FE1678_0;
+v0115D498_0 .net "setter_var", 0 0, v00FE1360_0; 1 drivers
+L_00FE15C8 .reduce/nor v00FE1360_0;
+L_00FE1620 .reduce/nor v0115CFC8_0;
+L_00FE16D0 .reduce/nor L_01150F70;
+S_01159600 .scope module, "guesserInstance" "password_guesser" 2 21, 4 1, S_01159798;
+ .timescale 0 0;
+L_0115EB88 .functor AND 1, L_00FE1728, v0115CFC8_0, C4<1>, C4<1>;
+L_0115ECA0 .functor AND 1, v00FE1360_0, L_00FE14C0, C4<1>, C4<1>;
+L_0115EAE0 .functor OR 1, L_0115EB88, L_0115ECA0, C4<0>, C4<0>;
+v0115D1D8_0 .net *"_s1", 0 0, L_00FE1728; 1 drivers
+v0115CE10_0 .net *"_s2", 0 0, L_0115EB88; 1 drivers
+v0115D548_0 .net *"_s5", 0 0, L_00FE14C0; 1 drivers
+v0115D128_0 .net *"_s6", 0 0, L_0115ECA0; 1 drivers
+v0115D2E0_0 .net *"_s8", 0 0, L_0115EAE0; 1 drivers
+v0115D230_0 .alias "guesser_final", 0 0, v0115D288_0;
+v0115CE68_0 .alias "guesser_var", 0 0, v0115D0D0_0;
+v0115D390_0 .alias "setter_var", 0 0, v0115D498_0;
+L_00FE1728 .reduce/nor v00FE1360_0;
+L_00FE14C0 .reduce/nor v0115CFC8_0;
+L_00FE1780 .reduce/nor L_0115EAE0;
+    .scope S_01159798;
 T_0 ;
-    %set/v v0100B3D0_0, 1, 1;
+    %set/v v0115CF18_0, 1, 1;
     %end;
     .thread T_0;
-    .scope S_01009158;
+    .scope S_01159798;
 T_1 ;
-    %vpi_call 2 23 "$dumpfile", "eight_bit_auth.vcd";
-    %vpi_call 2 24 "$dumpvars", 1'sb0, S_01009158;
-    %set/v v0100B480_0, 0, 1;
-    %set/v v0100B428_0, 0, 1;
+    %vpi_call 2 28 "$dumpfile", "eight_bit_auth.vcd";
+    %vpi_call 2 29 "$dumpvars", 1'sb0, S_01159798;
+    %set/v v00FE1360_0, 0, 1;
+    %set/v v0115CFC8_0, 0, 1;
     %delay 1, 0;
-    %set/v v0100B480_0, 1, 1;
-    %set/v v0100B428_0, 1, 1;
+    %set/v v00FE1360_0, 0, 1;
+    %set/v v0115CFC8_0, 1, 1;
     %delay 1, 0;
-    %set/v v0100B480_0, 1, 1;
-    %set/v v0100B428_0, 1, 1;
+    %set/v v00FE1360_0, 1, 1;
+    %set/v v0115CFC8_0, 1, 1;
     %delay 1, 0;
-    %set/v v0100B480_0, 0, 1;
-    %set/v v0100B428_0, 0, 1;
+    %set/v v00FE1360_0, 0, 1;
+    %set/v v0115CFC8_0, 0, 1;
     %delay 1, 0;
-    %set/v v0100B480_0, 0, 1;
-    %set/v v0100B428_0, 0, 1;
+    %set/v v00FE1360_0, 0, 1;
+    %set/v v0115CFC8_0, 0, 1;
     %delay 1, 0;
-    %set/v v0100B480_0, 1, 1;
-    %set/v v0100B428_0, 1, 1;
+    %set/v v00FE1360_0, 1, 1;
+    %set/v v0115CFC8_0, 1, 1;
     %delay 1, 0;
-    %set/v v0100B480_0, 1, 1;
-    %set/v v0100B428_0, 1, 1;
+    %set/v v00FE1360_0, 1, 1;
+    %set/v v0115CFC8_0, 1, 1;
     %delay 1, 0;
-    %set/v v0100B480_0, 1, 1;
-    %set/v v0100B428_0, 0, 1;
+    %set/v v00FE1360_0, 0, 1;
+    %set/v v0115CFC8_0, 0, 1;
     %delay 1, 0;
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.
-:file_names 3;
+:file_names 5;
     "N/A";
     "<interactive>";
     "eight_bit_auth.v";
+    "./components/password_setter.v";
+    "./components/password_guesser.v";

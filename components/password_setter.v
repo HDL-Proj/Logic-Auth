@@ -1,8 +1,8 @@
-module password_setter (a, b, c, d, e);
+module password_setter (setter_var, guesser_var, setter_final);
 
-    input a, b, c, d;
-    output e;
-
-    assign e = (!( ( (a && b) || (a && c))  || ( (c || (!c)) && ((!d) || (a)) ) ));
+    input setter_var, guesser_var;
+    output setter_final;
+    //NOTE: XOR bool func expression: A`.B + A.B`
+    assign setter_final = ( !((!(setter_var) && guesser_var) || (setter_var && !(guesser_var))) );
 
 endmodule

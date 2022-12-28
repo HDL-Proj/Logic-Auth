@@ -1,4 +1,6 @@
 //DATA FLOW MODELING 👻
+`include "components/password_setter.v"
+`include "components/password_guesser.v"
 module eight_bit_auth;
 
 // iverilog -o eight_bit_auth.vvp eight_bit_auth.v
@@ -13,8 +15,9 @@ module eight_bit_auth;
     wire unmatched;
 
     //NOTE: XOR bool func expression: A`.B + A.B`
-    assign setter_final = ( !((!(setter_var) && guesser_var) || (setter_var && !(guesser_var))) );
-    assign guesser_final = ( !((!(setter_var) && guesser_var) || (setter_var && !(guesser_var))) );
+    password_setter setterInstance(setter_var, guesser_var, setter_final);
+    password_guesser guesserInstance(setter_var, guesser_var, guesser_final);
+
     assign middle_gate = ( setter_final && guesser_final );
     assign matched = ( middle_gate && constant );
     assign unmatched = ( !(middle_gate) && (constant) );
@@ -24,7 +27,7 @@ module eight_bit_auth;
     $dumpvars(0, eight_bit_auth);
         setter_var = 0; guesser_var = 0;  
         #1
-        setter_var = 1; guesser_var = 1;  
+        setter_var = 0; guesser_var = 1;  
         #1
         setter_var = 1; guesser_var = 1; 
         #1
