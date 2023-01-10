@@ -1,6 +1,6 @@
 # Logic-Auth
 
-4 bit dip switch password encapsulation
+8 bit dip switch password encapsulation
 
 ## To run this stuff, just follow this steps below on your terminal 👽️
 
