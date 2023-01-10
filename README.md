@@ -33,3 +33,5 @@ Nota,
 Mission,
 Efa,
 Tamio
+
+### ✨Our logic circuit link: https://circuitverse.org/simulator/embed/logic-auth
