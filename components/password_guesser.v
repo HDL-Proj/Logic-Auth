@@ -1,8 +1,8 @@
-module password_guesser (a, b, c, d, e);
+module password_guesser (setter_var, guesser_var, guesser_final);
 
-    input a, b, c, d;
-    output e;
-
-    assign e = (!( ( (a && b) || (a && c))  || ( (c || (!c)) && ((!d) || (a)) ) ));
+    input setter_var, guesser_var;
+    output guesser_final;
+    //NOTE: XOR bool func expression: A`.B + A.B`
+    assign guesser_final = ( !((!(setter_var) && guesser_var) || (setter_var && !(guesser_var))) );
 
 endmodule
