@@ -23,3 +23,13 @@ gtkwave
 ```
 
 ### 📝Note: disregard tb_main.v file for now
+
+## 👥:
+
+Alicaway,
+Belicario,
+Revilla,
+Nota,
+Mission,
+Efa,
+Tamio
